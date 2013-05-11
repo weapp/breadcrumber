@@ -7,11 +7,11 @@ require "breadcrumber/version"
 Gem::Specification.new do |s|
   s.name        = "breadcrumber"
   s.version     = Breadcrumber::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Breadcrumber."
-  s.description = "TODO: Description of Breadcrumber."
+  s.authors     = ["Manuel Alb"]
+  s.email       = ["weap88@gmail.com"]
+  #s.homepage    = "TODO"
+  s.summary     = "Breadcrumb for Rails."
+  s.description = "Breadcrumb for Rails."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
