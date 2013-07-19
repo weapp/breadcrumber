@@ -1,5 +1,6 @@
 module Breadcrumber
   module Configure
+
     @@truncate_length = 20
     @@truncate_separator = " "
 
@@ -22,5 +23,6 @@ module Breadcrumber
     def truncate_separator=(separator)
       @@truncate_separator = separator
     end
+
   end
 end

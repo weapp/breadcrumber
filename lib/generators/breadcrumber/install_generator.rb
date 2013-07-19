@@ -5,7 +5,7 @@ module Breadcrumber
       source_root File.expand_path("../templates", __FILE__)
 
       def copy_initializer_file
-        copy_file "breadcrumber.rb", "config/initializers/#{file_name}.rb"
+        copy_file "breadcrumber.rb", "config/initializers/breadcrumber.rb"
       end
     end
   end
