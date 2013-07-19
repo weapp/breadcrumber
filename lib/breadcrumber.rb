@@ -1,4 +1,4 @@
-%w{ models controllers helpers }.each do |dir|
+%w{ models controllers helpers breadcrumber }.each do |dir|
   path = File.join(File.dirname(__FILE__), 'app', dir)
   $LOAD_PATH << path
   ActiveSupport::Dependencies.autoload_paths << path
@@ -8,6 +8,7 @@ end
 module Breadcrumber
   module Breadcrumber
     extend ActiveSupport::Concern
+    extend Configure
 
     included do
     end
@@ -15,6 +16,7 @@ module Breadcrumber
     def add_literal_breadcrumb name, path = ''
       @breadcrumbs ||= []
       path = eval(path) if path =~ /_path|_url|@/
+      name = truncate(name, length: truncate_length, separator: truncate_separator) if name =~ //
       @breadcrumbs << [name, path]
     end
 
